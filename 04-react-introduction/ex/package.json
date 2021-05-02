@@ -4,7 +4,8 @@
   "description": "In this excercise you will create a login web application. The application will consist of the following components:",
   "main": "todo.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "npx http-server"
   },
   "keywords": [],
   "author": "",

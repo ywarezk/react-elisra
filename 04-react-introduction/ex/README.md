@@ -37,7 +37,7 @@ Try and design your app using bootstrap which is already added to the `index.htm
 > npm init --yes
 > npm install @babel/standalone
 > npm install react react-dom
-
+> npm install
 ```
 
 ## Run in browser
