@@ -24,6 +24,10 @@ https://registry.npmjs.com
 > npm set registry http://nteptartifact:8081/artifactory/api/npm/npm/
 ```
 
+```
+> npm set registry https://registry.npmjs.com
+```
+
 ## Install a package
 
 ```
