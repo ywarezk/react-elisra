@@ -37,3 +37,17 @@ https://registry.npmjs.com
 ```
 > npm install typescript -D
 ```
+
+```
+> npm install
+```
+
+## EX.
+
+- Install Node.js
+- Install VsCode
+- create a folder and open that folder with vscode
+- open a terminal/cmd with vscode.
+- init npm
+- install react.
+
