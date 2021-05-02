@@ -30,8 +30,19 @@ It will hold a form with an email and a password field and a submit button.
 
 Try and design your app using bootstrap which is already added to the `index.html`
 
+## Installations
+
+1. 
+```
+> npm init --yes
+> npm install @babel/standalone
+> npm install react react-dom
+
+```
+
 ## Run in browser
 
 ```
 npx http-server
 ```
+

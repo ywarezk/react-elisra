@@ -36,6 +36,8 @@ const h1 = (
 )
 */
 
+
+
 // react component
 function HelloWorld() {
 	return (
@@ -46,6 +48,14 @@ function HelloWorld() {
 				</u>
 			</strong>
 		</h1> 
+	)
+}
+
+function App() {
+	return (
+		<div>
+			<HelloWorld />
+		</div>
 	)
 }
 

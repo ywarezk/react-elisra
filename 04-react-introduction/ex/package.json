@@ -1,0 +1,17 @@
+{
+  "name": "ex",
+  "version": "1.0.0",
+  "description": "In this excercise you will create a login web application. The application will consist of the following components:",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/standalone": "^7.14.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
