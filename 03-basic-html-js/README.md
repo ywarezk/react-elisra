@@ -25,3 +25,19 @@ These are the topics you need to know in Javascript for this course:
 - in that file create the following layout
 
 ![Login Layout](login.png)
+
+```html
+<div>
+<img>
+<a>
+<form>
+<input>
+<footer>
+```
+
+```CSS
+.some-container {
+	display: flex;
+}
+
+```
