@@ -7,6 +7,9 @@ Continue the app you started in the  `01-react-introduction/ex`
 Add a component that displays a todo list.  
 That component should have a hard coded array (you can take several items from here: `http://localhost:3333/api/tasks/unsecure`)
 
+For non bunker users:
+`http://nztodo.herokuapp.com/api/tasks/?format=json`
+
 Display those items in an unordered list `ul-li` using `map` to iterate on that array.
 
 Each element of the list should have a button
@@ -21,9 +24,29 @@ Connect a submit event to the login form.
 
 When submitting the form send the following ajax request
 
+For bunker users
+
 ```
 fetch(
 	'http://localhost:3333/api/users/login',
+	{
+		method: 'POST',
+		body: JSON.stringify({
+			email: 'yariv@nerdeez.com',
+			password: '12345678'
+		}),
+		headers: {
+			'Content-Type': 'application/json'
+		}
+	}
+)
+```
+
+For free users
+
+```
+fetch(
+	'https://academeez-login-ex.herokuapp.com/api/users/login',
 	{
 		method: 'POST',
 		body: JSON.stringify({
