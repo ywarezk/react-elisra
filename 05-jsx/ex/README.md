@@ -5,7 +5,7 @@ Continue the app you started in the  `01-react-introduction/ex`
 ## TodoList
 
 Add a component that displays a todo list.  
-That component should have a hard coded array (you can take several items from here: `http://nztodo.herokuapp.com/api/tasks/?format=json`)
+That component should have a hard coded array (you can take several items from here: `http://localhost:3333/api/tasks/unsecure`)
 
 Display those items in an unordered list `ul-li` using `map` to iterate on that array.
 
@@ -23,7 +23,7 @@ When submitting the form send the following ajax request
 
 ```
 fetch(
-	'https://academeez-login-ex.herokuapp.com/api/users/login',
+	'http://localhost:3333/api/users/login',
 	{
 		method: 'POST',
 		body: JSON.stringify({
