@@ -7,6 +7,9 @@ javascript -----> React -----------> DOM
 
  */
  
+ 
+ // VirtualDOM -----> DOM
+ 
 /*
 const h1 = React.createElement(
 	'h1',
