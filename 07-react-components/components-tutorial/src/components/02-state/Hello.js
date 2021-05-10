@@ -23,6 +23,15 @@ export default function HelloState() {
 		setIsTextVisible(!isTextVisible);
 	}
 	
+	// NO!!
+	// use lifecycle of component
+	// do not use render function to move to next state!!!!
+	/*
+	setTimeout(() => {
+		setIsTextVisible(!isTextVisible);
+	}, 1000)
+	*/
+	
 	return (
 		<div>
 			{ isTextVisible && <h1>Hello world </h1> } 
