@@ -1,0 +1,9 @@
+footer {
+	width: 100vw;
+	background-color: #2d2d2d;
+	color: white;
+}
+
+footer h1 {
+	text-align: center;
+}
