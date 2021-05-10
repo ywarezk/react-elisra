@@ -61,11 +61,12 @@
 	 /**
 	  * This function will run when submitting the form
 	  */
-	 const handleLogin = (event) => {
-		// event.preventDefault();
+	 const handleLogin = async (event) => {
+		event.preventDefault();
 		console.log('before fetch'); 
 		 
-		const objectToSubscribeCbPromise = fetch(
+		// Promise<Response>
+		const loginResponse = await fetch(
 			'http://localhost:3333/api/users/login',
 			{
 				method: 'POST',
@@ -79,19 +80,8 @@
 			}
 		)
 		
-		console.log('before then');
-		
-		objectToSubscribeCbPromise.then(
-			function(response) {
-				
-				response.json().then(function(token) {
-					console.log(token);
-				})
-				
-			}
-		)
-		
-		console.log('after then');
+		const token = await loginResponse.json();
+		console.log(token);
 	 }
 	 
 	 return (
