@@ -1,0 +1,86 @@
+/**
+
+login created with material design
+
+ */
+ 
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import './Login.css';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import { useState } from 'react';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+
+
+ 
+ export default function Login() {
+	 const [isSubmitting, setIsSubmitting] = useState(false);
+	 
+	 /**
+	  * This function will run when submitting the form
+	  */
+	 const handleLogin = async (event) => {
+		event.preventDefault();
+		console.log('before fetch'); 
+		setIsSubmitting(true);
+		 
+		// Promise<Response>
+		const loginResponse = await fetch(
+			'https://academeez-login-ex.herokuapp.com/api/users/login',
+			{
+				method: 'POST',
+				body: JSON.stringify({
+					email: 'yariv@nerdeez.com',
+					password: '12345678'
+				}),	
+				headers: {
+					'Content-Type': 'application/json'
+				}
+			}
+		)
+		
+		const token = await loginResponse.json();
+		console.log(token);
+		
+		setIsSubmitting(false);
+	 }
+	 
+	 return (
+		<Card>
+		
+			<CardContent>
+				<form onSubmit={handleLogin} className="login-form">
+					<div>
+						<TextField 
+							type="email" 
+							name="user-email" 
+							placeholder="Enter your email" 
+						/>
+					</div>
+					<div>
+						<TextField 
+							type="password" 
+							name="user-password" 
+							placeholder="Enter your email" 
+						/>
+					</div>
+					<div>
+						<Button
+							type="submit" 
+							variant="contained" 
+							color="primary"
+							disabled={isSubmitting}
+						>
+							Login
+						</Button>
+						
+						{ isSubmitting && <CircularProgress /> }
+					</div>
+				</form>
+			</CardContent>
+		</Card>
+		
+	 )
+ }

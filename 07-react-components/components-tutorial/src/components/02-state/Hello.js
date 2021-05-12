@@ -10,17 +10,53 @@ const Child = memo(() => {
 	)
 })
 
-export default function HelloState() {
+export default function HelloState({ isCondition }) {
 	console.log('render hello state');
 	
 	// [ true, setter(newValue) => void]
 	// const arr = useState( true );
 	// const isTextVisible = arr[0];
 	// const setIsTextVisible = arr[1];
-	const [ isTextVisible, setIsTextVisible ] = useState( true );
+	
+	/**
+	 * 
+	 
+	 iterable
+	 
+	 // counter = 0;
+	 state[counter] => state[0]
+	 
+	 // counter++
+	 
+	 state[counter] => state[1]
+	 counter++
+	 
+	 state[counter] => state[2]
+	 
+	 
+	 state = [
+		 
+		 {foo: 'bar'},
+		 true,
+		 {firstName: 'Pigletshvily', lastName: 'Chaitovski'}
+		 
+	 ]
+	 
+	 */
+	
+	// if (isCondition) {
+	const [ isTextVisible, setIsTextVisible ] = useState( true );	
+	// }
+	
+	
+	const [ somethingBoolean, setSomethingBoolean ] = useState( true );
+	
+	const [ cuteDog, setCuteDog ] = useState({firstName: 'Pigletshvily', lastName: 'Chaitovski'})
 	
 	const toggleText = () => {
 		setIsTextVisible(!isTextVisible);
+		
+		// setIsTextVisible({foo: 'bar'})
 	}
 	
 	// NO!!

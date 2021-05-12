@@ -1,0 +1,35 @@
+
+
+.header {
+	height: 100px;
+	background-color: #2d2d2d;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100vw;
+}
+
+.header img {
+	height: 80px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	padding-right: 30px;
+}
+
+
+.header nav {
+	display: flex;
+}
+
+header nav>div {
+	margin-right: 20px;
+}
+
+header nav a {
+	color: white;
+}
