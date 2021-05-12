@@ -63,7 +63,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 						<TextField 
 							type="password" 
 							name="user-password" 
-							placeholder="Enter your email" 
+							placeholder="Enter your password" 
 						/>
 					</div>
 					<div>
