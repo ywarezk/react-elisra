@@ -1,0 +1,15 @@
+
+
+.login-form {
+	width: 300px;
+	/* border: 1px solid black; */
+}
+
+.login-form .MuiFormControl-root {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.login-form button {
+	margin-top: 20px;
+}
