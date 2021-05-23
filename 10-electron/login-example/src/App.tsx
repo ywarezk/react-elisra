@@ -1,51 +1,43 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import icon from '../assets/icon.svg';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.global.css';
+import Header from './components/Header';
+import Login from './components/Login/Login';
 
 const Hello = () => {
   return (
     <div>
-      <div className="Hello">
-        <img width="200px" alt="icon" src={icon} />
-      </div>
-      <h1>electron-react-boilerplate</h1>
-      <div className="Hello">
-        <a
-          href="https://electron-react-boilerplate.js.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              📚
-            </span>
-            Read our docs
-          </button>
-        </a>
-        <a
-          href="https://github.com/sponsors/electron-react-boilerplate"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button">
-            <span role="img" aria-label="books">
-              🙏
-            </span>
-            Donate
-          </button>
-        </a>
-      </div>
+      <h1>
+        i moved to js
+      </h1>
+      <Login />
     </div>
   );
 };
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" component={Hello} />
-      </Switch>
-    </Router>
+    <BrowserRouter>
+
+      <div>
+        <Header />
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">
+                Homepage
+              </Link>
+            </li>
+          </ul>
+        </nav>
+
+          <Switch>
+            <Route path="/" component={Hello} />
+          </Switch>
+      </div>
+
+    </BrowserRouter>
+
+
   );
 }

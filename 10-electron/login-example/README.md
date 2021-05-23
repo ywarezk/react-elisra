@@ -1,5 +1,8 @@
 # React and Electron
 
+- Main process
+- Renderer process -> index.html
+
 ## Start a new project
 
 ```bash
@@ -7,3 +10,11 @@
 > cd your-project-name
 > yarn
 ```
+
+## EX.
+
+- Create a new electron app
+- the app will contain 2 routes
+  - /    => LoginComponent
+  - /todo   => TodoComponent
+
