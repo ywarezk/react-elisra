@@ -17,3 +17,9 @@ the library expose components:
 > npm install react-router-dom
 ```
 
+## simple routing app
+
+/ => homepage
+/about => about page
+404
+
