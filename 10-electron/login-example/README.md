@@ -14,6 +14,14 @@
 ## EX.
 
 - Create a new electron app
+- copy the lesson electron app
+- this should solve bunker errors:
+ELECTRON_OVERRIDE_DIST_PATH=path to electron-v11.4.7-win32-x64.zip
+
+```
+> yarn
+```
+
 - the app will contain 2 routes
   - /    => LoginComponent
   - /todo   => TodoComponent
